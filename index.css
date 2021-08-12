@@ -18,7 +18,22 @@
     width: 100%;
     position: fixed;
  }
-
-#posts{
-  padding: 30px 10px 10px;
+#formText {
+  padding: 23px 0px 0px;
+      margin: inherit;
 }
+#container-form {
+  padding: 30px 10px 10px;
+display: grid;
+}
+#bodyInput {
+  padding: 30px;
+}
+#posts{
+  padding: 4px 10px 10px;
+}
+button {
+  height: 38px;
+    margin-top: 13px;
+    margin-right: 63%;
+    font-size: 16px;}
