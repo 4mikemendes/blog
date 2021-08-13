@@ -23,15 +23,14 @@
       margin: inherit;
 }
 #container-form {
-  padding: 30px 10px 10px;
-display: grid;
+  padding-top: 50px;
 }
 #bodyInput {
   padding: 30px;
 }
-#posts{
+/* #posts{
   padding: 4px 10px 10px;
-}
+} */
 button {
   height: 38px;
     margin-top: 13px;

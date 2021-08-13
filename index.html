@@ -19,11 +19,17 @@
         Don't worry about styling quite yet.
          -->
          <div id="container-form">
-          <h3 id="formText">Title</h3>
-            <input type="text" name="title" id="titleInput">
-            <h3 id="formText">Body</h3>
-        <input type="text" name="body" id="bodyInput">
-        <button>Submit</button>
+        <form>
+          <label for="titleInput">Title</label>
+          <br>
+          <input type="text" name="title" id="titleInput">
+          <br>
+          <label for="bodyInput">Body</label>
+          <br>
+          <textarea id="bodyInput"></textarea>
+          <br>
+          <button>Submit</button>
+        </form>
          </div>
       <div id="posts"></div>
         <script src="index.js"></script>

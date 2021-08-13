@@ -1,4 +1,3 @@
-
  fetch("https://apis.scrimba.com/jsonplaceholder/posts")
  .then(res => res.json())
  .then(data => {
@@ -12,5 +11,18 @@ for (let post of postsFive) {
 }
 document.getElementById("posts").innerHTML = html
  })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
