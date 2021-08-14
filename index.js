@@ -13,9 +13,16 @@ document.getElementById("posts").innerHTML = html
  })
 
 
-
-
-
+document.getElementById("new-post").addEventListener("submit", function(e) {
+  e.preventDefault()
+  const postTitle = document.getElementById("post-title").value
+  const postBody = document.getElementById("bodyInput").value
+  const data = {
+    title: postTitle,
+    body: postBody
+  }
+  console.log(data)
+})
 
 
 
