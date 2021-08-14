@@ -12,7 +12,6 @@ for (let post of postsFive) {
 document.getElementById("posts").innerHTML = html
  })
 
-
 document.getElementById("new-post").addEventListener("submit", function(e) {
   e.preventDefault()
   const postTitle = document.getElementById("post-title").value
@@ -21,15 +20,18 @@ document.getElementById("new-post").addEventListener("submit", function(e) {
     title: postTitle,
     body: postBody
   }
-  console.log(data)
+
+const postMethod = {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: {
+    "Content-Type": "application.json"
+  }
+}
+
+fetch("https://apis.scrimba.com/jsonplaceholder/posts", postMethod)
+.then(res => res.json())
+.then(data => console.log(data))
 })
-
-
-
-
-
-
-
-
 
 
