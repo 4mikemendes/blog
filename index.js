@@ -1,7 +1,6 @@
- fetch("https://apis.scrimba.com/jsonplaceholder/posts")
- .then(res => res.json())
- .then(data => {
-const postsFive = data.slice(0,5)
+ let postsFive = []
+
+ function renderPosts() {
 let html = " "
 for (let post of postsFive) {
   html += `
@@ -10,6 +9,13 @@ for (let post of postsFive) {
   <hr />`
 }
 document.getElementById("posts").innerHTML = html
+ }
+
+ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
+ .then(res => res.json())
+ .then(data => {
+postsFive = data.slice(0,5)
+renderPosts()
  })
 
 document.getElementById("new-post").addEventListener("submit", function(e) {
@@ -32,11 +38,8 @@ const postMethod = {
     fetch("https://apis.scrimba.com/jsonplaceholder/posts", postMethod)
         .then(res => res.json())
         .then(post => {
-          document.getElementById("posts").innerHTML = `
-  <h3>${post.title}</h3>
-  <p>${post.body}</p>
-  <hr />
-  ${document.getElementById("posts").innerHTML}`
+          postsFive.unshift(post)
+        renderPosts()
         })
 })
 
