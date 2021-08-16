@@ -40,6 +40,7 @@ const postMethod = {
         .then(post => {
           postsFive.unshift(post)
         renderPosts()
+        document.forms[0].reset()
         })
 })
 
