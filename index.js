@@ -25,13 +25,20 @@ const postMethod = {
   method: "POST",
   body: JSON.stringify(data),
   headers: {
-    "Content-Type": "application.json"
+    "Content-Type": "application/json"
   }
 }
 
-fetch("https://apis.scrimba.com/jsonplaceholder/posts", postMethod)
-.then(res => res.json())
-.then(data => console.log(data))
+    fetch("https://apis.scrimba.com/jsonplaceholder/posts", postMethod)
+        .then(res => res.json())
+        .then(post => {
+          document.getElementById("posts").innerHTML = `
+  <h3>${post.title}</h3>
+  <p>${post.body}</p>
+  <hr />
+  ${document.getElementById("posts").innerHTML}`
+        })
 })
+
 
 
